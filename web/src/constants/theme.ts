@@ -1,0 +1,26 @@
+export const COLORS = {
+  light: {
+    bg: "#FFFFFF",
+    surface: "#F5F5F5",
+    primary: "#a2ca00",
+    primaryLight: "#a2ca0034",
+    text: "#121212",
+    textDim: "#666666",
+    border: "#E5E5E5",
+    userBubble: "#a2ca00",
+    aiBubble: "#F0F0F0",
+    codeBg: "#F6F8FA",
+  },
+  dark: {
+    bg: "#121212",
+    surface: "#1E1E1E",
+    primary: "#ccff00",
+    primaryLight: "#7592023f",
+    text: "#FFFFFF",
+    textDim: "#AAAAAA",
+    border: "#333333",
+    userBubble: "#ccff00",
+    aiBubble: "#2C2C2C",
+    codeBg: "#272822",
+  },
+};

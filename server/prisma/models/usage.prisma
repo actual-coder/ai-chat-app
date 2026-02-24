@@ -1,0 +1,17 @@
+model Usage {
+    id               String        @id @default(uuid())
+    userId           String
+    conversationId   String?
+    model            String
+    provider         String
+    promptTokens     Int
+    completionTokens Int
+    totalTokens      Int
+    cost             Decimal?      @db.Decimal(10, 6)
+    latencyMs        Int?
+    createdAt        DateTime      @default(now())
+    user             User          @relation(fields: [userId], references: [id])
+    conversation     Conversation? @relation(fields: [conversationId], references: [id])
+
+    @@index([userId, createdAt])
+}

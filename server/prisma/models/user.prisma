@@ -1,0 +1,17 @@
+model User {
+    id            String         @id
+    name          String
+    role          UserRole       @default(USER)
+    bio           String?
+    email         String
+    emailVerified Boolean        @default(false)
+    image         String?
+    createdAt     DateTime       @default(now())
+    updatedAt     DateTime       @updatedAt
+    accounts      Account[]
+    conversations Conversation[]
+    usages        Usage[]
+
+    @@unique([email])
+    @@map("User")
+}

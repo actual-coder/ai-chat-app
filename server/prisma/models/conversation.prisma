@@ -1,0 +1,15 @@
+model Conversation {
+    id        String    @id @default(ulid())
+    userId    String
+    title     String
+    isActive  Boolean   @default(true)
+    createdAt DateTime  @default(now())
+    updatedAt DateTime  @updatedAt
+    isPublic  Boolean   @default(false)
+    publicId  String?   @unique
+    user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+    messages  Message[]
+    usages    Usage[]
+
+    @@index([userId, id])
+}
