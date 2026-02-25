@@ -18,7 +18,12 @@ const domains = ["http://localhost:5173"];
 const app = new Elysia({ name: "AI-Chat" })
   .use(serverTiming())
   .use(httpExceptionPlugin())
-  .use(staticPlugin())
+  .use(
+    staticPlugin({
+      assets: join(process.cwd(), "public"),
+      prefix: "/public",
+    }),
+  )
   .use(
     cors({
       origin: domains,
