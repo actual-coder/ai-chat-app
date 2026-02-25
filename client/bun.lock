@@ -6,7 +6,7 @@
       "name": "client",
       "dependencies": {
         "@better-auth/expo": "^1.4.18",
-        "@codearcade/expo-markdown-native": "^2.0.2",
+        "@codearcade/expo-markdown-native": "^2.0.4",
         "@expo/vector-icons": "^15.0.3",
         "@hookform/resolvers": "^5.2.2",
         "@react-native-async-storage/async-storage": "^2.2.0",
@@ -265,7 +265,7 @@
 
     "@better-fetch/fetch": ["@better-fetch/fetch@1.1.21", "", {}, "sha512-/ImESw0sskqlVR94jB+5+Pxjf+xBwDZF/N5+y2/q4EqD7IARUTSpPfIo8uf39SYpCxyOCtbyYpUrZ3F/k0zT4A=="],
 
-    "@codearcade/expo-markdown-native": ["@codearcade/expo-markdown-native@2.0.2", "", { "peerDependencies": { "react": "*", "react-native": "*", "react-native-code-highlighter": "*", "react-native-markdown-display": "*", "react-native-svg": "*", "react-syntax-highlighter": "*" } }, "sha512-NJuzIufU8bNBkThKLwV3h422JzuAkin6GWMsL2e6aJAPCM+I/GwcY1aQzcCQ2e+RXxkAEUngpBZUg1IxyjiLhw=="],
+    "@codearcade/expo-markdown-native": ["@codearcade/expo-markdown-native@2.0.4", "", { "peerDependencies": { "react": "*", "react-native": "*", "react-native-code-highlighter": "*", "react-native-markdown-display": "*", "react-native-svg": "*", "react-syntax-highlighter": "*" } }, "sha512-Ft5PZgmVaXPNDXR6oxlNqftwYQh36CQn0udSCI31t4LwrSgBc+Rkof/XbNB9Svbnd3dCDblCescEONR8xguNsA=="],
 
     "@egjs/hammerjs": ["@egjs/hammerjs@2.0.17", "", { "dependencies": { "@types/hammerjs": "^2.0.36" } }, "sha512-XQsZgjm2EcVUiZQf11UBJQfmZeEmOW8DpI1gsFeln6w0ae0ii4dMQEQ0kjl6DspdWX1aGY1/loyXnP0JS06e/A=="],
 

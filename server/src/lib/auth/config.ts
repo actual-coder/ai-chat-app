@@ -1,5 +1,6 @@
 import { BetterAuthOptions } from "better-auth/types";
 import { expo } from "@better-auth/expo";
+import { isDevelopment } from "../..";
 
 export const authConfig: BetterAuthOptions = {
   socialProviders: {
@@ -31,5 +32,5 @@ export const authConfig: BetterAuthOptions = {
     },
   },
   plugins: [expo()],
-  trustedOrigins: ["exp://"],
+  trustedOrigins: [isDevelopment ? "exp://" : "ai-chat://"],
 };

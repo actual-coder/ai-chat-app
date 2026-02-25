@@ -17,7 +17,8 @@
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.RECORD_AUDIO"
-      ]
+      ],
+      "package": "com.aichat.app"
     },
     "web": {
       "output": "static",

@@ -33,12 +33,12 @@ const Main = () => {
           animation: "slide_from_left",
         }}
       >
-        <Stack.Protected guard={isAuthenticated}>
-          <Stack.Screen name="(app)" />
-        </Stack.Protected>
-
         <Stack.Protected guard={!isAuthenticated}>
           <Stack.Screen name="login/index" />
+        </Stack.Protected>
+
+        <Stack.Protected guard={isAuthenticated}>
+          <Stack.Screen name="(app)" />
         </Stack.Protected>
       </Stack>
 
