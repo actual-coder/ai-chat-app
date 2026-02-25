@@ -281,7 +281,7 @@ export const messagesModule = new Elysia({
 
       if (!conversation) throw new NotFoundException("Conversation not found");
 
-      const baseUrl = new URL(request.url).origin;
+      const baseUrl = Bun.env.FRONTEND_URL;
 
       if (conversation.isPublic && conversation.publicId)
         return {
