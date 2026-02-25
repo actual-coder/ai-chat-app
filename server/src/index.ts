@@ -8,6 +8,7 @@ import { ip } from "elysia-ip";
 import { openapi } from "@elysiajs/openapi";
 import { conversationsModule } from "./modules/conversations";
 import { usersModule } from "./modules/users";
+import { join } from "path";
 
 export const envMode = Bun.env.NODE_ENV?.trim() || "development";
 export const isDevelopment = envMode === "development";
@@ -30,7 +31,10 @@ const app = new Elysia({ name: "AI-Chat" })
   .get("/", () => "Hello Elysia")
   .use(conversationsModule)
   .use(usersModule)
-  .get("/share/*", () => Bun.file("./public/index.html"));
+  .get("/share/*", () => {
+    const filePath = join(process.cwd(), "public", "index.html");
+    return Bun.file(filePath);
+  });
 
 if (isDevelopment) {
   app.use(openapi()).listen(3000);
