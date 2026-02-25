@@ -32,5 +32,5 @@ export const authConfig: BetterAuthOptions = {
     },
   },
   plugins: [expo()],
-  trustedOrigins: [isDevelopment ? "exp://" : "ai-chat://"],
+  trustedOrigins: ["exp://", "ai-chat://"],
 };
